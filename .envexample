@@ -1,0 +1,6 @@
+DATABASE=DatabaseName
+
+DATABASE_USER=Username
+DATABASE_PASSWORD=Password
+
+SECRET=YourSecret
