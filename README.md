@@ -27,12 +27,12 @@ Client Applications:
 Since this boilerplate project is using PostgreSQL, you have to install it for your machine and get a database up and running. After you have created a database and a database user, you can fill out the environment variables in the *server/.env* file.
 
 ```
-DATABASE=mydatabase
+DATABASE=yourdatabasename
 
-DATABASE_USER=postgres
-DATABASE_PASSWORD=postgres
+DATABASE_USER=yourdatabaseuse
+DATABASE_PASSWORD=yourdatasepassword
 
-SECRET=asdlplplfwfwefwekwself.2342.dawasdq
+SECRET=yoursecretkey
 ```
 
 The `SECRET` is just a random string for your authentication. Keep all these information secure by adding the *.env* file to your *.gitignore* file. No third-party should have access to this information.
