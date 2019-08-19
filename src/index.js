@@ -79,7 +79,7 @@ const isTest = !!process.env.TEST_DATABASE;
 const isProduction = process.env.NODE_ENV === 'production';
 const port = process.env.PORT || 8000;
 
-sequelize.sync({ force: !isProduction }).then(async () => {
+sequelize.sync({ force: isProduction }).then(async () => {
   if (isProduction) {
     createUsersWithMessages();
   }
