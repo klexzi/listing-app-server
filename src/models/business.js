@@ -1,4 +1,4 @@
-import { Model, STRING, INTEGER } from 'sequelize';
+import { Model, STRING, INTEGER, TEXT, ARRAY } from 'sequelize';
 import { sequelize } from './index';
 import Category from './category';
 
@@ -21,7 +21,7 @@ Business.init(
       },
     },
     description: {
-      type: STRING,
+      type: STRING(1234),
       allowNull: false,
       validate: {
         len: [8, 250],
@@ -54,6 +54,10 @@ Business.init(
       validate: {
         len: [3, 250],
       },
+    },
+    images: {
+      type: ARRAY(TEXT),
+      defaultValue: [],
     },
     views: {
       type: INTEGER,

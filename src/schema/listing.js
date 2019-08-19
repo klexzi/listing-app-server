@@ -16,6 +16,7 @@ export default gql`
     name: String!
     description: String!
     phone: String
+    images: [String!]
     email: String
     websiteUrl: String
     address: String
@@ -26,6 +27,7 @@ export default gql`
     name: String
     description: String
     phone: String
+    images: [String!]
     email: String
     websiteUrl: String
     address: String
@@ -37,6 +39,7 @@ export default gql`
     description: String
     phone: String
     email: String
+    images: [String!]
     websiteUrl: String
     address: String
     views: Int
