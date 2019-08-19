@@ -7,13 +7,16 @@
     "node": "10.16.0"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js"
+    "start": "npm run build && node dist/index.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && babel src --out-dir dist --copy-files",
+    "dev": "nodemon --legacy-watch src/index.js --ext js --exec babel-node"
   },
   "keywords": [],
   "author": "Kelechi Nwosu",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.1.6",
+    "@babel/cli": "^7.5.5",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/register": "^7.0.0",
@@ -24,6 +27,7 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@babel/core": "^7.1.6",
     "apollo-server": "^2.2.3",
     "apollo-server-express": "^2.2.3",
     "bcrypt": "^3.0.6",
@@ -36,6 +40,7 @@
     "graphql-resolvers": "^0.3.3",
     "jsonwebtoken": "^8.4.0",
     "pg": "^7.6.1",
+    "rimraf": "^3.0.0",
     "sequelize": "^5.15.0",
     "sequelize-cli": "^5.5.0",
     "uuid": "^3.3.2"
