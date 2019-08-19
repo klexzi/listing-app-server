@@ -15,12 +15,12 @@ export default {
               [Op.or]: [
                 {
                   name: {
-                    [Op.like]: `%${q}%`,
+                    [Op.iLike]: `%${q}%`,
                   },
                 },
                 {
                   description: {
-                    [Op.like]: `%${q}%`,
+                    [Op.iLike]: `%${q}%`,
                   },
                 },
               ],
