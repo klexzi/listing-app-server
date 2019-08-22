@@ -20,7 +20,7 @@ export default gql`
     email: String
     websiteUrl: String
     address: String
-    categories: [Int!]!
+    categories: [String!]!
   }
 
   input BusinessUpdateInput {

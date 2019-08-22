@@ -35,7 +35,7 @@ export default {
         password,
       });
 
-      return { token: createToken(admin, secret, '30m') };
+      return { token: createToken(admin, secret, '5 days') };
     },
 
     signIn: async (
@@ -57,7 +57,7 @@ export default {
         throw new AuthenticationError('Invalid password.');
       }
 
-      return { token: createToken(admin, secret, '30m') };
+      return { token: createToken(admin, secret, '5 days') };
     },
 
     updateUser: combineResolvers(

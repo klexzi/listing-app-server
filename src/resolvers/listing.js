@@ -42,7 +42,7 @@ export default {
         let categories = [];
         for await (let categoryId of body.categories) {
           const category = await Category.findOne({
-            where: { id: categoryId },
+            where: { id: +categoryId },
           });
           if (!category) continue;
           categories.push(category);
